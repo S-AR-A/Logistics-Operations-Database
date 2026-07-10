@@ -79,6 +79,7 @@
     </None>
     <Build Include="dbo\Tables\DriverMonthlyMetric.sql" />
     <Build Include="dbo\Tables\DeliveryEvent.sql" />
+    <Build Include="dbo\Tables\Customer.sql" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Condition="'$(NetCoreBuild)' == 'true'">
@@ -88,6 +89,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Scripts\InsertDeliveryEvent.sql" />
+    <None Include="Scripts\InsertCustomer.sql" />
   </ItemGroup>
   <ItemGroup>
     <RefactorLog Include="P2.refactorlog" />
