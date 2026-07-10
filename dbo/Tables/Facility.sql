@@ -7,6 +7,7 @@
     [latitude]       FLOAT (53)    NOT NULL,
     [longitude]      FLOAT (53)    NOT NULL,
     [dockDoors]      TINYINT       NOT NULL,
-    [operatingHours] NVARCHAR (50) NOT NULL
+    [operatingHours] NVARCHAR (50) NOT NULL, 
+    CONSTRAINT [PK_Facility] PRIMARY KEY ([facilityId])
 );
 

@@ -77,13 +77,20 @@
     <None Include="Scripts\InsertDriverMonthlyMetric.sql">
       <CopyToOutputDirectory>DoNotCopy</CopyToOutputDirectory>
     </None>
-    <Build Include="dbo\DriverMonthlyMetric.sql" />
+    <Build Include="dbo\Tables\DriverMonthlyMetric.sql" />
+    <Build Include="dbo\Tables\DeliveryEvent.sql" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Condition="'$(NetCoreBuild)' == 'true'">
       <Version>1.0.0</Version>
       <PrivateAssets>All</PrivateAssets>
     </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Scripts\InsertDeliveryEvent.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <RefactorLog Include="P2.refactorlog" />
   </ItemGroup>
   <Import Project="$(NETCoreTargetsPath)\Microsoft.Data.Tools.Schema.SqlTasks.targets" Condition="'$(NetCoreBuild)' == 'true'" />
   <Target Name="BeforeBuild">

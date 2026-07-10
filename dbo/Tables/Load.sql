@@ -10,6 +10,7 @@
     [fuelSurcharge]      FLOAT (53)    NOT NULL,
     [accessorialCharges] TINYINT       NOT NULL,
     [loadStatus]         NVARCHAR (50) NOT NULL,
-    [bookingType]        NVARCHAR (50) NOT NULL
+    [bookingType]        NVARCHAR (50) NOT NULL, 
+    CONSTRAINT [PK_Load] PRIMARY KEY ([loadId]), 
 );
 
