@@ -13,6 +13,10 @@
     [cargoDamageCost]   FLOAT (53)    NOT NULL,
     [claimAmount]       FLOAT (53)    NOT NULL,
     [preventableFlag]   BIT           NOT NULL,
-    [description]       NVARCHAR (50) NOT NULL
+    [description]       NVARCHAR (50) NOT NULL, 
+    CONSTRAINT [PK_SafetyIncident] PRIMARY KEY ([incidentId]),
+    CONSTRAINT FK_SafetyIncident_Trip FOREIGN KEY (tripId) REFERENCES dbo.Trip(tripId),
+    CONSTRAINT FK_SafetyIncident_Truck FOREIGN KEY (truckId) REFERENCES dbo.Truck(truckId),
+    CONSTRAINT FK_SafetyIncident_Driver FOREIGN KEY (driverId) REFERENCES dbo.Driver(driverId)
 );
 

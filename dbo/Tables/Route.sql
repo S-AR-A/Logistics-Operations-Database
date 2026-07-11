@@ -7,6 +7,7 @@
     [typicalDistanceMiles] SMALLINT      NOT NULL,
     [baseRatePerMile]      FLOAT (53)    NOT NULL,
     [fuelSurchargeRate]    TIME (7)      NOT NULL,
-    [typicalTransitDays]   TINYINT       NOT NULL
+    [typicalTransitDays]   TINYINT       NOT NULL, 
+    CONSTRAINT [PK_Route] PRIMARY KEY ([routeId])
 );
 

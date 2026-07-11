@@ -9,6 +9,10 @@
     [gallons]        FLOAT (53)    NOT NULL,
     [pricePerGallon] FLOAT (53)    NOT NULL,
     [totalCost]      FLOAT (53)    NOT NULL,
-    [fuelCardNumber] MONEY         NOT NULL
+    [fuelCardNumber] MONEY         NOT NULL, 
+    CONSTRAINT [PK_FuelPurchase] PRIMARY KEY ([fuelPurchaseId]),
+    CONSTRAINT FK_FuelPurchase_Trip FOREIGN KEY (tripId) REFERENCES dbo.Trip(tripId),
+    CONSTRAINT FK_FuelPurchase_Truck FOREIGN KEY (truckId) REFERENCES dbo.Truck(truckId),
+    CONSTRAINT FK_FuelPurchase_Driver FOREIGN KEY (driverId) REFERENCES dbo.Driver(driverId)
 );
 

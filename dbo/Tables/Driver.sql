@@ -10,6 +10,7 @@
     [homeTerminal]     NVARCHAR (50) NOT NULL,
     [employmentStatus] NVARCHAR (50) NOT NULL,
     [cdlClass]         NVARCHAR (50) NOT NULL,
-    [yearsExperience]  TINYINT       NOT NULL
+    [yearsExperience]  TINYINT       NOT NULL, 
+    CONSTRAINT [PK_Driver] PRIMARY KEY ([driverId])
 );
 

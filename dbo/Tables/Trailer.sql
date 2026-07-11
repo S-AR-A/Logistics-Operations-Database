@@ -7,6 +7,7 @@
     [vin]             NVARCHAR (50) NOT NULL,
     [acquisitionDate] DATE          NOT NULL,
     [status]          NVARCHAR (50) NOT NULL,
-    [currentLocation] NVARCHAR (50) NOT NULL
+    [currentLocation] NVARCHAR (50) NOT NULL, 
+    CONSTRAINT [PK_Trailer] PRIMARY KEY ([trailerId])
 );
 

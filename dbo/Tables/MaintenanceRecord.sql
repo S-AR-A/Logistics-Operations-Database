@@ -10,6 +10,8 @@
     [totalCost]          FLOAT (53)    NOT NULL,
     [facilityLocation]   NVARCHAR (50) NOT NULL,
     [downtimeHours]      FLOAT (53)    NOT NULL,
-    [serviceDescription] NVARCHAR (50) NOT NULL
+    [serviceDescription] NVARCHAR (50) NOT NULL, 
+    CONSTRAINT [PK_MaintenanceRecord] PRIMARY KEY ([maintenanceId]), 
+    CONSTRAINT [FK_MaintenanceRecord_Truck] FOREIGN KEY (truckId) REFERENCES dbo.Truck(truckId)
 );
 

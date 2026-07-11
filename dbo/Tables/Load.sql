@@ -12,5 +12,7 @@
     [loadStatus]         NVARCHAR (50) NOT NULL,
     [bookingType]        NVARCHAR (50) NOT NULL, 
     CONSTRAINT [PK_Load] PRIMARY KEY ([loadId]), 
+    CONSTRAINT [FK_Load_Customer] FOREIGN KEY (customerId) REFERENCES dbo.Customer([customerId]), 
+    CONSTRAINT [FK_Load_Route] FOREIGN KEY (routeId) REFERENCES dbo.Route(routeId)
 );
 
