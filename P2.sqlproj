@@ -61,28 +61,31 @@
   <Import Condition="'$(NetCoreBuild)' != 'true' AND '$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
   <ItemGroup>
     <Folder Include="Properties" />
-    <Folder Include="dbo\" />
-    <Folder Include="dbo\Tables\" />
     <Folder Include="Scripts" />
+    <Folder Include="Tables" />
+    <Folder Include="Progammability" />
+    <Folder Include="Progammability\Sequences" />
   </ItemGroup>
   <ItemGroup>
-    <Build Include="dbo\Tables\Truck.sql" />
-    <Build Include="dbo\Tables\TruckUtilizationMetric.sql" />
-    <Build Include="dbo\Tables\Trip.sql" />
-    <Build Include="dbo\Tables\Trailer.sql" />
-    <Build Include="dbo\Tables\SafetyIncident.sql" />
-    <Build Include="dbo\Tables\Route.sql" />
-    <Build Include="dbo\Tables\MaintenanceRecord.sql" />
-    <Build Include="dbo\Tables\Load.sql" />
-    <Build Include="dbo\Tables\FuelPurchase.sql" />
-    <Build Include="dbo\Tables\Facility.sql" />
-    <Build Include="dbo\Tables\Driver.sql" />
     <None Include="Scripts\InsertDriverMonthlyMetric.sql">
       <CopyToOutputDirectory>DoNotCopy</CopyToOutputDirectory>
     </None>
-    <Build Include="dbo\Tables\DriverMonthlyMetric.sql" />
-    <Build Include="dbo\Tables\DeliveryEvent.sql" />
-    <Build Include="dbo\Tables\Customer.sql" />
+    <None Include="Notes.sql" />
+    <None Include="TempQuery.sql" />
+    <Build Include="Tables\Customer.sql" />
+    <Build Include="Tables\DeliveryEvent.sql" />
+    <Build Include="Tables\Driver.sql" />
+    <Build Include="Tables\DriverMonthlyMetric.sql" />
+    <Build Include="Tables\Facility.sql" />
+    <Build Include="Tables\FuelPurchase.sql" />
+    <Build Include="Tables\Load.sql" />
+    <Build Include="Tables\MaintenanceRecord.sql" />
+    <Build Include="Tables\Route.sql" />
+    <Build Include="Tables\SafetyIncident.sql" />
+    <Build Include="Tables\Trailer.sql" />
+    <Build Include="Tables\Trip.sql" />
+    <Build Include="Tables\Truck.sql" />
+    <Build Include="Tables\TruckUtilizationMetric.sql" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Condition="'$(NetCoreBuild)' == 'true'">
@@ -96,6 +99,9 @@
   </ItemGroup>
   <ItemGroup>
     <RefactorLog Include="P2.refactorlog" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="Progammability\Sequences\TripSeq.sql" />
   </ItemGroup>
   <Import Project="$(NETCoreTargetsPath)\Microsoft.Data.Tools.Schema.SqlTasks.targets" Condition="'$(NetCoreBuild)' == 'true'" />
   <Target Name="BeforeBuild">
