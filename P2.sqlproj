@@ -65,6 +65,7 @@
     <Folder Include="Tables" />
     <Folder Include="Progammability" />
     <Folder Include="Progammability\Sequences" />
+    <Folder Include="Progammability\Stored Procedures" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Scripts\InsertDriverMonthlyMetric.sql">
@@ -102,6 +103,7 @@
   </ItemGroup>
   <ItemGroup>
     <Build Include="Progammability\Sequences\TripSeq.sql" />
+    <Build Include="Progammability\Stored Procedures\InsertTrip.sql" />
   </ItemGroup>
   <Import Project="$(NETCoreTargetsPath)\Microsoft.Data.Tools.Schema.SqlTasks.targets" Condition="'$(NetCoreBuild)' == 'true'" />
   <Target Name="BeforeBuild">
