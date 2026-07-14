@@ -106,6 +106,7 @@
     <Build Include="Progammability\Stored Procedures\InsertTrip.sql" />
     <Build Include="Progammability\Stored Procedures\AssignDriverToTrip.sql" />
     <Build Include="Progammability\Stored Procedures\AssignTruckToTrip.sql" />
+    <Build Include="Progammability\Stored Procedures\StartTrip.sql" />
   </ItemGroup>
   <Import Project="$(NETCoreTargetsPath)\Microsoft.Data.Tools.Schema.SqlTasks.targets" Condition="'$(NetCoreBuild)' == 'true'" />
   <Target Name="BeforeBuild">
