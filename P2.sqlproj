@@ -108,6 +108,11 @@
     <Build Include="Progammability\Stored Procedures\AssignTruckToTrip.sql" />
     <Build Include="Progammability\Stored Procedures\StartTrip.sql" />
     <Build Include="Progammability\Stored Procedures\CompleteTrip.sql" />
+    <Build Include="Progammability\Stored Procedures\ProcessDeliveryEvent.sql" />
+    <Build Include="Progammability\Sequences\DeliveryEventSeq.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Scripts\OnTimeFlag data Type change  in DeliveryEvent table.sql" />
   </ItemGroup>
   <Import Project="$(NETCoreTargetsPath)\Microsoft.Data.Tools.Schema.SqlTasks.targets" Condition="'$(NetCoreBuild)' == 'true'" />
   <Target Name="BeforeBuild">
