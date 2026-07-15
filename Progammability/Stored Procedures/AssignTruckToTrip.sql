@@ -21,13 +21,13 @@ BEGIN
 		ELSE IF NOT EXISTS (
 			SELECT 1
 			FROM Truck WITH (UPDLOCK,HOLDLOCK)
-			WHERE TruckId = @TruckId
+			WHERE truckId = @TruckId
 		)
 			THROW 50003,'No such a truck exists, sire!',1
 		ELSE IF EXISTS (
 			SELECT 1
 			FROM Truck 
-			WHERE TruckId = @TruckId
+			WHERE truckId = @TruckId
 				AND status = 'Maintenance'
 		)
 			THROW 50004,'This truck is in maintenance, sire!',1
