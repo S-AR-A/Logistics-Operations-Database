@@ -9,6 +9,7 @@
     [maintenanceCost]   FLOAT (53)    NOT NULL,
     [downtimeHours]     FLOAT (53)    NOT NULL,
     [utilizationRate]   FLOAT (53)    NOT NULL,
-    CONSTRAINT [PK_TruckUtilizationMetric] PRIMARY KEY CLUSTERED ([truckId] ASC, [month] ASC)
+    CONSTRAINT [PK_TruckUtilizationMetric] PRIMARY KEY CLUSTERED ([truckId] ASC, [month] ASC),
+    CONSTRAINT FK_TruckUtilizationMetric_Truck FOREIGN KEY (truckId) REFERENCES dbo.Truck(truckId)
 );
 
