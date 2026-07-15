@@ -33,7 +33,7 @@ BEGIN
 	FROM dbo.MaintenanceRecord
 	WHERE truckId = @TruckId
 		AND YEAR(maintenanceDate) = @Year
-		AND MONTH(maintenanceDate) = @month
+		AND MONTH(maintenanceDate) = @month;
 	
 	WITH TripWithRevenue
 	AS
