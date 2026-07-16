@@ -3,7 +3,7 @@
 	SELECT 
 		t.truckId,
 		d.firstName + ' ' + d.lastName as driverName,
-		tk.unitNumber,
+		tk.unitNumber as truck,
 		c.customerName,
 		r.originCity + ', ' + r.originState as origin,
 		r.destinationCity + ', ' + r.destinationState as destination,
