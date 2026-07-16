@@ -6,6 +6,6 @@
     primaryFreightType     NVARCHAR (50) NOT NULL,
     accountStatus          NVARCHAR (50) NOT NULL,
     contractStartDate      DATE          NOT NULL,
-    annualRevenuePotential INT           NOT NULL,
+    annualRevenuePotential DECIMAL(19,4)           NOT NULL,
     CONSTRAINT PK_Customer PRIMARY KEY CLUSTERED (customerId ASC)
 );

@@ -7,7 +7,7 @@
     [dispatchDate]        DATE          NOT NULL,
     [actualDistanceMiles] SMALLINT      NOT NULL DEFAULT 0,
     [actualDurationHours] FLOAT (53)    NOT NULL DEFAULT 0,
-    [fuelGallonsUsed]     FLOAT (53)    NOT NULL DEFAULT 0,
+    [fuelGallonsUsed]     DECIMAL(19,4)    NOT NULL DEFAULT 0,
     [averageMpg]          FLOAT (53)    NOT NULL DEFAULT 0,
     [idleTimeHours]       FLOAT (53)    NOT NULL DEFAULT 0,
     [tripStatus]          NVARCHAR (50) NOT NULL DEFAULT 'Not Started',

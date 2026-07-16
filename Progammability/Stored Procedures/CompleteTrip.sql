@@ -2,7 +2,7 @@
 	@TripId NVARCHAR(50),
 	@ActualDistanceMiles SMALLINT,
     @ActualDurationHours FLOAT (53),
-    @FuelGallonsUsed     FLOAT (53),
+    @FuelGallonsUsed     DECIMAL(19,4),
     @IdleTimeHours       FLOAT (53)
 AS
 BEGIN

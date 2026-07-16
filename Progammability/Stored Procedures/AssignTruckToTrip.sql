@@ -34,7 +34,7 @@ BEGIN
 		ELSE IF EXISTS (
 			SELECT 1
 			FROM Trip 
-			WHERE TruckId = @TruckId
+			WHERE truckId = @TruckId
 				AND tripStatus IN ('Not Started','Started')
 		)
 			THROW 50005,'This truck is already assigned to an active trip, sire!',1

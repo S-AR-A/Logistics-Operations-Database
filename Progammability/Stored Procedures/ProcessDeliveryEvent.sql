@@ -12,7 +12,7 @@
    @LocationState           NVARCHAR(3),
    @ActualDistanceMiles     SMALLINT = 0,
    @ActualDurationHours     FLOAT(53) = 0,
-   @FuelGallonsUsed         FLOAT(53) = 0,
+   @FuelGallonsUsed         DECIMAL(19,4) = 0,
    @IdleTimeHours           FLOAT(53) = 0
 AS
 BEGIN

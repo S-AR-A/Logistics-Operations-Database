@@ -6,7 +6,7 @@
     [loadType]           NVARCHAR (50) NOT NULL,
     [weightLbs]          INT           NOT NULL,
     [pieces]             TINYINT       NOT NULL,
-    [revenue]            FLOAT (53)    NOT NULL,
+    [revenue]            DECIMAL(19,4) NOT NULL,
     [fuelSurcharge]      FLOAT (53)    NOT NULL,
     [accessorialCharges] TINYINT       NOT NULL,
     [loadStatus]         NVARCHAR (50) NOT NULL,

@@ -19,10 +19,10 @@ BEGIN
 
 	DECLARE @TripsCompleted			TINYINT;
 	DECLARE	@TotalMiles				INT;
-	DECLARE @TotalRevenue			FLOAT(53);
+	DECLARE @TotalRevenue			DECIMAL(19,4);
 	DECLARE	@AverageMpg				FLOAT(53);
 	DECLARE	@MaintenanceEvents		TINYINT;
-	DECLARE	@MaintenanceCost		FLOAT(53);
+	DECLARE	@MaintenanceCost		DECIMAL(19,4);
 	DECLARE @DowntimeHours			FLOAT(53);
 	DECLARE	@OnTripHours			FLOAT(53);
 
