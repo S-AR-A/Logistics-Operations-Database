@@ -66,6 +66,7 @@
     <Folder Include="Progammability" />
     <Folder Include="Progammability\Sequences" />
     <Folder Include="Progammability\Stored Procedures" />
+    <Folder Include="Views" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Scripts\InsertDriverMonthlyMetric.sql">
@@ -111,7 +112,7 @@
     <Build Include="Progammability\Stored Procedures\ProcessDeliveryEvent.sql" />
     <Build Include="Progammability\Sequences\DeliveryEventSeq.sql" />
     <Build Include="Progammability\Stored Procedures\ProcessTumMonth.sql" />
-    <Build Include="vw_ActiveTrips.sql" />
+    <Build Include="Views\vw_ActiveTrips.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Scripts\OnTimeFlag data Type change  in DeliveryEvent table.sql" />

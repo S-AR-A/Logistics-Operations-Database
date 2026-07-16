@@ -19,3 +19,4 @@
 		on l.customerId = c.customerId
 	join Route as r
 		on l.routeId = r.routeId
+	WHERE t.tripStatus IN ('Not Started','Started')
