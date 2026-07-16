@@ -11,6 +11,7 @@
     [employmentStatus] NVARCHAR (50) NOT NULL,
     [cdlClass]         NVARCHAR (50) NOT NULL,
     [yearsExperience]  TINYINT       NOT NULL, 
+    [status]           NVARCHAR(50)  NOT NULL DEFAULT 'Active',
     CONSTRAINT [PK_Driver] PRIMARY KEY ([driverId])
 );
 
