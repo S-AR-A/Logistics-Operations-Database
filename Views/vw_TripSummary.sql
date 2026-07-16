@@ -2,24 +2,24 @@
 AS
 SELECT 
 	t.tripId,
-	tk.unitNumber as truck,
-	d.firstName + ' ' + d.lastName as driverName,
-	l.loadType as loadType,
+	tk.unitNumber AS truck,
+	d.firstName + ' ' + d.lastName AS driverName,
+	l.loadType AS loadType,
 	t.dispatchDate,
-	de.actualDatetime as deliveryDateTime,
-	t.actualDistanceMiles as totalDistance,
-	t.actualDurationHours as duration,
-	t.fuelGallonsUsed as fuelUsed,
-	t.averageMpg as mpg	
-from trip as t
-join Driver as d
-on t.driverId = d.driverId
-join Truck as tk
-on t.truckId = tk.truckId
-join Load as l
-on t.loadId = l.loadId
-join Customer as c
-on l.customerId = c.customerId
-join DeliveryEvent as de
-on t.tripId = de.tripId
-Where t.tripStatus = 'Completed'
+	de.actualDatetime AS deliveryDateTime,
+	t.actualDistanceMiles AS totalDistance,
+	t.actualDurationHours AS duration,
+	t.fuelGallonsUsed AS fuelUsed,
+	t.averageMpg AS mpg	
+FROM trip AS t
+JOIN Driver AS d
+ON t.driverId = d.driverId
+JOIN Truck AS tk
+ON t.truckId = tk.truckId
+JOIN Load AS l
+ON t.loadId = l.loadId
+JOIN Customer AS c
+ON l.customerId = c.customerId
+JOIN DeliveryEvent AS de
+ON t.tripId = de.tripId
+WHERE t.tripStatus = 'Completed'

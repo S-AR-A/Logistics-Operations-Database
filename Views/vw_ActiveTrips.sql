@@ -2,21 +2,21 @@
 	AS 
 	SELECT 
 		t.truckId,
-		d.firstName + ' ' + d.lastName as driverName,
-		tk.unitNumber as truck,
+		d.firstName + ' ' + d.lastName AS driverName,
+		tk.unitNumber AS truck,
 		c.customerName,
-		r.originCity + ', ' + r.originState as origin,
-		r.destinationCity + ', ' + r.destinationState as destination,
+		r.originCity + ', ' + r.originState AS origin,
+		r.destinationCity + ', ' + r.destinationState AS destination,
 		t.tripStatus
-	FROM Trip as t
-	join Driver as d
-		on t.driverId = d.driverId
-	join Truck as tk
-		on t.truckId = tk.truckId
-	join Load as l
-		on t.loadId = l.loadId
-	join Customer as c
-		on l.customerId = c.customerId
-	join Route as r
-		on l.routeId = r.routeId
+	FROM Trip AS t
+	JOIN Driver AS d
+		ON t.driverId = d.driverId
+	JOIN Truck AS tk
+		ON t.truckId = tk.truckId
+	JOIN Load AS l
+		ON t.loadId = l.loadId
+	JOIN Customer AS c
+		ON l.customerId = c.customerId
+	JOIN Route AS r
+		ON l.routeId = r.routeId
 	WHERE t.tripStatus IN ('Not Started','Started')

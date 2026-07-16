@@ -114,6 +114,7 @@
     <Build Include="Progammability\Stored Procedures\ProcessTumMonth.sql" />
     <Build Include="Views\vw_ActiveTrips.sql" />
     <Build Include="Views\vw_TripSummary.sql" />
+    <Build Include="Views\vw_CustomerShippingHistory.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Scripts\OnTimeFlag data Type change  in DeliveryEvent table.sql" />
