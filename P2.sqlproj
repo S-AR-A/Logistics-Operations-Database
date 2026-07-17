@@ -115,6 +115,7 @@
     <Build Include="Views\vw_ActiveTrips.sql" />
     <Build Include="Views\vw_TripSummary.sql" />
     <Build Include="Views\vw_CustomerShippingHistory.sql" />
+    <Build Include="Views\vw_FleetDashboard.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Scripts\OnTimeFlag data Type change  in DeliveryEvent table.sql" />
