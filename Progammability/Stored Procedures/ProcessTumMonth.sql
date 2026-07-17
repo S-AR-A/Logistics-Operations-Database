@@ -55,7 +55,7 @@ BEGIN
 		AND YEAR(dispatchDate) = @Year
 		AND MONTH(dispatchDate) = @month
 
-	DECLARE @MonthAsDate DATE = DATEFROMPARTS(@year,@month,1);
+	DECLARE @MonthAsDate DATE = DATEFROMPARTS(@Year,@month,1);
 	IF NOT EXISTS 
 		(
 		SELECT 1

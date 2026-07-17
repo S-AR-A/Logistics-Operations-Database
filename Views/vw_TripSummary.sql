@@ -11,7 +11,7 @@ SELECT
 	t.actualDurationHours AS duration,
 	t.fuelGallonsUsed AS fuelUsed,
 	t.averageMpg AS mpg	
-FROM trip AS t
+FROM Trip AS t
 JOIN Driver AS d
 ON t.driverId = d.driverId
 JOIN Truck AS tk

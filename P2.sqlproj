@@ -121,6 +121,7 @@
     <Build Include="Tables\TripAudit.sql" />
     <Build Include="Progammability\Triggers\tg_PreventCompletedTripDelete.sql" />
     <Build Include="Views\vw_HighestRevenueTripsPerMonth.sql" />
+    <Build Include="Progammability\Stored Procedures\SearchTripDynamic.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Scripts\OnTimeFlag data Type change  in DeliveryEvent table.sql" />
