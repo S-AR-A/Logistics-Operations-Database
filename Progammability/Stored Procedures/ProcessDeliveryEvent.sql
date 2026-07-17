@@ -8,8 +8,8 @@
    -- actualDatetime DATETIME2(7) NOT NULL,
    @DetentionMinutes        SMALLINT,
    -- onTimeFlag NVARCHAR(50) NOT NULL,
-   @LocationCity            NVARCHAR(50),
-   @LocationState           NVARCHAR(3),
+   --@LocationCity            NVARCHAR(50),
+   --@LocationState           NVARCHAR(3),
    @ActualDistanceMiles     SMALLINT = 0,
    @ActualDurationHours     FLOAT(53) = 0,
    @FuelGallonsUsed         DECIMAL(19,4) = 0,
@@ -73,9 +73,11 @@ SET NOCOUNT ON;
                 VALUES
                 (
                     RIGHT('00000000' + CAST(NEXT VALUE FOR dbo.DeliveryEventSeq AS NVARCHAR(8)),8),
-                    (SELECT loadId
-                    FROM Trip
-                    WHERE tripId = @TripId),
+                    (
+                        SELECT loadId
+                        FROM Trip
+                        WHERE tripId = @TripId
+                    ),
                     @TripId,
                     @EventType,
                     @FacilityId,
@@ -86,8 +88,16 @@ SET NOCOUNT ON;
                         WHEN @ScheduledDatetime >= @CurrentTime THEN 1
                         ELSE 0
                     END,
-                    @LocationCity,
-                    @LocationState
+                    (
+                        SELECT city
+                        FROM Facility
+                        WHERE facilityId = @FacilityId
+                     ),
+                     (
+                        SELECT [state]
+                        FROM Facility
+                        WHERE facilityId = @FacilityId
+                     )
                 )
 
         COMMIT
