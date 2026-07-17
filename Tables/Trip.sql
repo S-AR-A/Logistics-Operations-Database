@@ -1,11 +1,13 @@
 ﻿CREATE TABLE [dbo].[Trip] (
-    [tripId]              NVARCHAR (50) NOT NULL,
+    [tripId]              NVARCHAR (50) NOT NULL
+        CHECK (tripId LIKE 'TRIP[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]'),
     [loadId]              NVARCHAR (50) NOT NULL,
     [driverId]            NVARCHAR (50) NULL,
     [truckId]             NVARCHAR (50) NULL,
     [trailerId]           NVARCHAR (50) NULL,
     [dispatchDate]        DATE          NOT NULL,
-    [actualDistanceMiles] SMALLINT      NOT NULL DEFAULT 0,
+    [actualDistanceMiles] SMALLINT      NOT NULL DEFAULT 0
+        CHECK (actualDistanceMiles >= 0),
     [actualDurationHours] FLOAT (53)    NOT NULL DEFAULT 0,
     [fuelGallonsUsed]     DECIMAL(19,4)    NOT NULL DEFAULT 0,
     [averageMpg]          FLOAT (53)    NOT NULL DEFAULT 0,
