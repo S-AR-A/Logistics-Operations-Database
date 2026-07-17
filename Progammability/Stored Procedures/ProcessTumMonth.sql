@@ -38,10 +38,13 @@ BEGIN
 	WITH TripWithRevenue
 	AS
 	(
-		SELECT t.*,l.revenue
+		SELECT t.*, l.revenue, d.actualDatetime as adt
 		FROM Trip AS t
 			join dbo.[Load] AS l
-			on t.loadId = l.loadId
+				on t.loadId = l.loadId
+			join dbo.DeliveryEvent as d
+				on t.tripId = d.tripId
+				and d.eventType = 'Delivery'
 	)
 	SELECT 
 		@TripsCompleted = COUNT(*),
@@ -52,8 +55,8 @@ BEGIN
 	FROM TripWithRevenue
 	WHERE truckId = @TruckId
 		and tripStatus = 'Completed'
-		AND YEAR(dispatchDate) = @Year
-		AND MONTH(dispatchDate) = @month
+		AND YEAR(adt) = @Year
+		AND MONTH(adt) = @month
 
 	DECLARE @MonthAsDate DATE = DATEFROMPARTS(@Year,@month,1);
 	IF NOT EXISTS 
