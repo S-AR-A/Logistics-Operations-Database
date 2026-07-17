@@ -11,15 +11,15 @@ BEGIN
 			THROW 50001,'No such an active trip exists, sire!',1;
 		ELSE IF NOT EXISTS (SELECT 1 FROM dbo.Driver WHERE driverId = @driverId)
 				THROW 50002,'No such a driver exists, sire!',1;
-			ELSE IF EXISTS (
-				SELECT 1 
-				FROM dbo.Trip WITH (TABLOCK, HOLDLOCK)
-				WHERE driverId = @driverId AND tripStatus IN ('Not Strated','Started')
-				)
-					THROW 50003,'Driver is assigned to another trip, sire!',1;
+		ELSE IF (SELECT [status] FROM dbo.Driver WHERE driverId = @driverId) <> 'Active'
+				THROW 50003,'Driver is NOT available, sire!',1;
 		UPDATE dbo.Trip
 		SET driverId = @driverId
-		WHERE tripId = @tripId 	
+		WHERE tripId = @tripId 
+		
+		UPDATE dbo.Driver
+		SET status = 'On Trip'
+		WHERE driverId = @driverId
 		COMMIT
 	END TRY
 	BEGIN CATCH
