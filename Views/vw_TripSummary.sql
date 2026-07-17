@@ -22,4 +22,5 @@ JOIN Customer AS c
 ON l.customerId = c.customerId
 JOIN DeliveryEvent AS de
 ON t.tripId = de.tripId
+	AND DE.eventType = 'Delivery'
 WHERE t.tripStatus = 'Completed'

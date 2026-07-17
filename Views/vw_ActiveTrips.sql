@@ -9,9 +9,9 @@
 		r.destinationCity + ', ' + r.destinationState AS destination,
 		t.tripStatus
 	FROM Trip AS t
-	JOIN Driver AS d
+	LEFT JOIN Driver AS d
 		ON t.driverId = d.driverId
-	JOIN Truck AS tk
+	LEFT JOIN Truck AS tk
 		ON t.truckId = tk.truckId
 	JOIN Load AS l
 		ON t.loadId = l.loadId
