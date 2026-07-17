@@ -119,6 +119,7 @@
     <Build Include="Views\vw_FleetDashboard.sql" />
     <Build Include="Progammability\Triggers\TripUpdate.sql" />
     <Build Include="Tables\TripAudit.sql" />
+    <Build Include="Progammability\Triggers\tg_PreventCompletedTripDelete.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Scripts\OnTimeFlag data Type change  in DeliveryEvent table.sql" />
