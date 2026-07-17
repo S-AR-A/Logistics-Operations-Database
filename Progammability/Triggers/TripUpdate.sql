@@ -26,7 +26,8 @@
 		JOIN deleted as d
 			ON i.tripId = d.tripId
 		WHERE 
-			ISNULL(i.driverId, '')  <> INSNULL(d.driverId, '')
-			OR ISNULL(i.truckId, '') <> INSNULL(d.truckId, '')
-			OR ISNULL(i.tripStatus, '') <> INSNULL(d.tripStatus, '')
+			ISNULL(i.driverId, '')  <> ISNULL(d.driverId, '')
+			OR ISNULL(i.truckId, '') <> ISNULL(d.truckId, '')
+			OR ISNULL(i.tripStatus, '') <> ISNULL(d.tripStatus, '')
 	END
+
