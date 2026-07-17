@@ -67,6 +67,7 @@
     <Folder Include="Progammability\Sequences" />
     <Folder Include="Progammability\Stored Procedures" />
     <Folder Include="Views" />
+    <Folder Include="Progammability\Triggers" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Scripts\InsertDriverMonthlyMetric.sql">
@@ -116,6 +117,8 @@
     <Build Include="Views\vw_TripSummary.sql" />
     <Build Include="Views\vw_CustomerShippingHistory.sql" />
     <Build Include="Views\vw_FleetDashboard.sql" />
+    <Build Include="Progammability\Triggers\TripUpdate.sql" />
+    <Build Include="Tables\TripAudit.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Scripts\OnTimeFlag data Type change  in DeliveryEvent table.sql" />

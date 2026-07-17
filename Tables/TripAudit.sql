@@ -1,0 +1,13 @@
+﻿CREATE TABLE [dbo].[TripAudit]
+(
+	[Id] INT NOT NULL IDENTITY PRIMARY KEY,
+	auditDT DATETIME2 DEFAULT SYSDATETIME(),
+	loginName SYSNAME DEFAULT ORIGINAL_LOGIN(),
+	tripId NVARCHAR(50),
+	oldDriver NVARCHAR(50),
+	newDriver NVARCHAR(50),
+	oldTruck NVARCHAR(50),
+	newTruck NVARCHAR(50),
+	oldStatus NVARCHAR(50),
+	newStatus NVARCHAR(50)
+)
