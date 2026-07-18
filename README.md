@@ -1,7 +1,7 @@
 
 # Logistics Operations Database (in progress . . 🔨)
 
-Given the data as .csv files, The goal of this project is to modify schema, add SPs etc to make a decent SQL Server database.
+Given the tables as .csv files, The goal of this project is to modify schema, add SPs etc to make a decent SQL Server database.
 
 
 ## Procedures
