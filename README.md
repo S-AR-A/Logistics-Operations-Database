@@ -16,12 +16,13 @@ IF Delivery : Complete Trip
 
 ## Objects and Features
 
-* Table
 * Stored Procedure
 * View
 * Sequence
 * Trigger
 * Dynamic Query
+* Transaction
+* Error Handling
 ## CONSTRAINTS
 
 * PK
