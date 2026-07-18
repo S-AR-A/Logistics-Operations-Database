@@ -63,11 +63,10 @@
     <Folder Include="Properties" />
     <Folder Include="Scripts" />
     <Folder Include="Tables" />
-    <Folder Include="Progammability" />
-    <Folder Include="Progammability\Sequences" />
-    <Folder Include="Progammability\Stored Procedures" />
     <Folder Include="Views" />
-    <Folder Include="Progammability\Triggers" />
+    <Folder Include="Sequences" />
+    <Folder Include="Triggers" />
+    <Folder Include="Stored Procedures" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Scripts\InsertDriverMonthlyMetric.sql">
@@ -104,24 +103,24 @@
     <RefactorLog Include="P2.refactorlog" />
   </ItemGroup>
   <ItemGroup>
-    <Build Include="Progammability\Sequences\TripSeq.sql" />
-    <Build Include="Progammability\Stored Procedures\InsertTrip.sql" />
-    <Build Include="Progammability\Stored Procedures\AssignDriverToTrip.sql" />
-    <Build Include="Progammability\Stored Procedures\AssignTruckToTrip.sql" />
-    <Build Include="Progammability\Stored Procedures\StartTrip.sql" />
-    <Build Include="Progammability\Stored Procedures\CompleteTrip.sql" />
-    <Build Include="Progammability\Stored Procedures\ProcessDeliveryEvent.sql" />
-    <Build Include="Progammability\Sequences\DeliveryEventSeq.sql" />
-    <Build Include="Progammability\Stored Procedures\ProcessTumMonth.sql" />
     <Build Include="Views\vw_ActiveTrips.sql" />
     <Build Include="Views\vw_TripSummary.sql" />
     <Build Include="Views\vw_CustomerShippingHistory.sql" />
     <Build Include="Views\vw_FleetDashboard.sql" />
-    <Build Include="Progammability\Triggers\TripUpdate.sql" />
     <Build Include="Tables\TripAudit.sql" />
-    <Build Include="Progammability\Triggers\tg_PreventCompletedTripDelete.sql" />
     <Build Include="Views\vw_HighestRevenueTripsPerMonth.sql" />
-    <Build Include="Progammability\Stored Procedures\SearchTripDynamic.sql" />
+    <Build Include="Sequences\DeliveryEventSeq.sql" />
+    <Build Include="Sequences\TripSeq.sql" />
+    <Build Include="Triggers\tg_PreventCompletedTripDelete.sql" />
+    <Build Include="Triggers\TripUpdate.sql" />
+    <Build Include="Stored Procedures\AssignDriverToTrip.sql" />
+    <Build Include="Stored Procedures\AssignTruckToTrip.sql" />
+    <Build Include="Stored Procedures\CompleteTrip.sql" />
+    <Build Include="Stored Procedures\InsertTrip.sql" />
+    <Build Include="Stored Procedures\ProcessDeliveryEvent.sql" />
+    <Build Include="Stored Procedures\ProcessTumMonth.sql" />
+    <Build Include="Stored Procedures\SearchTripDynamic.sql" />
+    <Build Include="Stored Procedures\StartTrip.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Scripts\OnTimeFlag data Type change  in DeliveryEvent table.sql" />
